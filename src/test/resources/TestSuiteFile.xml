@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="Login to POD">
+		<classes>
+			<class name="com.test.wrappers.GenericWrappers" />
+			 <class name="com.test.testCases.TC003_MasterDataPage" />
+			 <class name="com.test.testCases.TC004CreateNewAcc" /> 
+			 <class name="com.test.testCases.TC005LMReportingMetrics" />
+		</classes>
+	</test>
+</suite>

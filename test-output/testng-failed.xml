@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="com.test.wrappers.TestNGListenerExample"/>
+  </listeners>
+  <test name="Login to POD(failed)">
+    <classes>
+      <class name="com.test.testCases.TC003_MasterDataPage">
+        <methods>
+          <include name="run"/>
+        </methods>
+      </class> <!-- com.test.testCases.TC003_MasterDataPage -->
+      <class name="com.test.wrappers.GenericWrappers">
+        <methods>
+          <include name="genericWrappers"/>
+        </methods>
+      </class> <!-- com.test.wrappers.GenericWrappers -->
+    </classes>
+  </test> <!-- Login to POD(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

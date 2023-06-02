@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test name="Login to POD(failed)">
+    <classes>
+      <class name="com.test.wrappers.GenericWrappers">
+        <methods>
+          <include name="genericWrappers"/>
+        </methods>
+      </class> <!-- com.test.wrappers.GenericWrappers -->
+      <class name="com.test.testCases.TC004CreateNewAcc">
+        <methods>
+          <include name="run"/>
+        </methods>
+      </class> <!-- com.test.testCases.TC004CreateNewAcc -->
+      <class name="com.test.testCases.TC005LMReportingMetrics">
+        <methods>
+          <include name="run"/>
+        </methods>
+      </class> <!-- com.test.testCases.TC005LMReportingMetrics -->
+    </classes>
+  </test> <!-- Login to POD(failed) -->
+</suite> <!-- Failed suite [Suite] -->

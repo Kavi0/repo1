@@ -1,0 +1,12 @@
+<suite name = "Suite1">
+	
+	<listeners>
+    <listener class-name="com.test.wrappers.TestNGListenerExample" />
+  </listeners>
+<test name="Login to POD">
+		<classes>
+			<class name="com.test.wrappers.GenericWrappers" />
+			<class name="com.test.testCases.TC003_MasterDataPage" />
+		</classes>
+	</test>
+</suite> 
