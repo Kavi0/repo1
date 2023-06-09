@@ -3,11 +3,11 @@
 <suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="com.test.testCases.TC003_MasterDataPage">
+      <class name="com.data.driventest.LoginUsingApachePOI">
         <methods>
-          <include name="run"/>
+          <include name="LoginTestCase"/>
         </methods>
-      </class> <!-- com.test.testCases.TC003_MasterDataPage -->
+      </class> <!-- com.data.driventest.LoginUsingApachePOI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

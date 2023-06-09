@@ -10,7 +10,7 @@ public class LoginPage {
 
 	@Test
 
-	public void testLogin()
+	public void testLogin() throws InterruptedException
 
 	{
 
@@ -21,6 +21,8 @@ public class LoginPage {
 		
 		LoginTest logsin = new LoginTest(driver);
 
+		Thread.sleep(2500);
+		
 		logsin.enterUsername("gAdmin");
 
 		logsin.enterPassword("Welcome1!");

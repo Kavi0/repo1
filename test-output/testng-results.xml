@@ -2,18 +2,18 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-02T10:02:30Z" name="Suite1" finished-at="2023-06-02T10:02:47Z" duration-ms="16843">
+  <suite started-at="2023-06-09T04:42:28Z" name="Suite1" finished-at="2023-06-09T04:42:46Z" duration-ms="17622">
     <groups>
     </groups>
-    <test started-at="2023-06-02T10:02:30Z" name="Login to POD" finished-at="2023-06-02T10:02:47Z" duration-ms="16843">
+    <test started-at="2023-06-09T04:42:28Z" name="Login to POD" finished-at="2023-06-09T04:42:46Z" duration-ms="17622">
       <class name="com.test.wrappers.GenericWrappers">
-        <test-method is-config="true" signature="genericWrappers()[pri:0, instance:com.test.wrappers.GenericWrappers@57250572]" started-at="2023-06-02T15:32:21Z" name="genericWrappers" finished-at="2023-06-02T15:32:30Z" duration-ms="8496" status="PASS">
+        <test-method is-config="true" signature="genericWrappers()[pri:0, instance:com.test.wrappers.GenericWrappers@740773a3]" started-at="2023-06-09T10:12:19Z" name="genericWrappers" finished-at="2023-06-09T10:12:28Z" duration-ms="9024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- genericWrappers -->
       </class> <!-- com.test.wrappers.GenericWrappers -->
       <class name="com.test.testCases.TC003_MasterDataPage">
-        <test-method signature="run()[pri:0, instance:com.test.testCases.TC003_MasterDataPage@5609159b]" started-at="2023-06-02T15:32:30Z" name="run" finished-at="2023-06-02T15:32:47Z" duration-ms="16821" status="PASS">
+        <test-method signature="run()[pri:0, instance:com.test.testCases.TC003_MasterDataPage@37f1104d]" started-at="2023-06-09T10:12:28Z" name="run" finished-at="2023-06-09T10:12:46Z" duration-ms="17587" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
