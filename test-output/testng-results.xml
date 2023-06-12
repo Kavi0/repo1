@@ -1,23 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="1" failed="0" skipped="0">
+<testng-results total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-09T04:42:28Z" name="Suite1" finished-at="2023-06-09T04:42:46Z" duration-ms="17622">
+  <suite started-at="2023-06-12T07:29:07Z" name="Default suite" finished-at="2023-06-12T07:29:36Z" duration-ms="29553">
     <groups>
     </groups>
-    <test started-at="2023-06-09T04:42:28Z" name="Login to POD" finished-at="2023-06-09T04:42:46Z" duration-ms="17622">
-      <class name="com.test.wrappers.GenericWrappers">
-        <test-method is-config="true" signature="genericWrappers()[pri:0, instance:com.test.wrappers.GenericWrappers@740773a3]" started-at="2023-06-09T10:12:19Z" name="genericWrappers" finished-at="2023-06-09T10:12:28Z" duration-ms="9024" status="PASS">
+    <test started-at="2023-06-12T07:29:07Z" name="Default test" finished-at="2023-06-12T07:29:36Z" duration-ms="29553">
+      <class name="com.data.driventest.LoginUsingApachePOI">
+        <test-method signature="LoginTestCase(java.lang.String, java.lang.String)[pri:0, instance:com.data.driventest.LoginUsingApachePOI@6c4980d3]" started-at="2023-06-12T12:59:08Z" name="LoginTestCase" data-provider="loginData" finished-at="2023-06-12T12:59:17Z" duration-ms="8820" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gAdmin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Welcome1!]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- genericWrappers -->
-      </class> <!-- com.test.wrappers.GenericWrappers -->
-      <class name="com.test.testCases.TC003_MasterDataPage">
-        <test-method signature="run()[pri:0, instance:com.test.testCases.TC003_MasterDataPage@37f1104d]" started-at="2023-06-09T10:12:28Z" name="run" finished-at="2023-06-09T10:12:46Z" duration-ms="17587" status="PASS">
+        </test-method> <!-- LoginTestCase -->
+        <test-method signature="LoginTestCase(java.lang.String, java.lang.String)[pri:0, instance:com.data.driventest.LoginUsingApachePOI@6c4980d3]" started-at="2023-06-12T12:59:17Z" name="LoginTestCase" data-provider="loginData" finished-at="2023-06-12T12:59:23Z" duration-ms="6461" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gAdmin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dummy]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- run -->
-      </class> <!-- com.test.testCases.TC003_MasterDataPage -->
-    </test> <!-- Login to POD -->
-  </suite> <!-- Suite1 -->
+        </test-method> <!-- LoginTestCase -->
+        <test-method signature="LoginTestCase(java.lang.String, java.lang.String)[pri:0, instance:com.data.driventest.LoginUsingApachePOI@6c4980d3]" started-at="2023-06-12T12:59:23Z" name="LoginTestCase" data-provider="loginData" finished-at="2023-06-12T12:59:30Z" duration-ms="6567" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Welcome1!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTestCase -->
+        <test-method signature="LoginTestCase(java.lang.String, java.lang.String)[pri:0, instance:com.data.driventest.LoginUsingApachePOI@6c4980d3]" started-at="2023-06-12T12:59:30Z" name="LoginTestCase" data-provider="loginData" finished-at="2023-06-12T12:59:36Z" duration-ms="6679" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dummy]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTestCase -->
+      </class> <!-- com.data.driventest.LoginUsingApachePOI -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -3,15 +3,10 @@ package com.data.driventest;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Properties;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class LoginUsingApachePOI {
@@ -26,59 +22,44 @@ public class LoginUsingApachePOI {
 	public static WebDriver driver;
 	public static Properties properties;
 
-	List<String> userNameLists = new ArrayList<String>();
-	List<String> passwordsLists = new ArrayList<String>();
-
-	public void readExcel() throws IOException {
+	@Test
+	public String[][] readExcel() throws IOException {
 
 		FileInputStream excel = new FileInputStream("D:\\TestData\\RyersonPODLogin.xlsx");
-		Workbook workbook = new XSSFWorkbook(excel);
+		XSSFWorkbook workbook = new XSSFWorkbook(excel);
 
-		Sheet sheet = workbook.getSheet("Sheet1");
+		Sheet sheet = workbook.getSheetAt(0);
 
-		Iterator<Row> rowIterator = sheet.iterator();
+		int LastRowNum = sheet.getLastRowNum();
+		short LastCellNum = sheet.getRow(0).getLastCellNum();
 
-		while (rowIterator.hasNext()) {
+		System.out.println("No of rows in this sheet: " + LastRowNum);
 
-			Row rowValues = rowIterator.next();
+		String[][] data = new String[LastRowNum][LastCellNum];
 
-			Iterator<Cell> columnIterator = rowValues.iterator();
+		for (int i = 1; i <= LastRowNum; i++) {
+			Row row = sheet.getRow(i);
 
-			int i = 2;
+			for (int j = 0; j < LastCellNum; j++) {
 
-			while (columnIterator.hasNext()) {
+				Cell cell = row.getCell(j);
 
-				if (i % 2 == 0) {
-
-					userNameLists.add(columnIterator.next().toString());
-
-				} else {
-
-					passwordsLists.add(columnIterator.next().toString());
-
-				}
-				i++;
-
+				String value = cell.getStringCellValue();
+				System.out.println(value);
+				data[i - 1][j] = value;
 			}
-
 		}
+		workbook.close();
+		return data;
 
 	}
-	
-	
-	/*
-	 * for (int i = 0; i < userNameLists.size(); i++) { String userName =
-	 * userNameLists.get(i); String passWord = passwordsLists.get(i);
-	 * //login(userName, passWord); }
-	 */
-	
 
-	/*
-	 * public void login(String userName, String passWord) { // Rest of the method
-	 * implementation remains the same }
-	 */
+	@DataProvider(name = "loginData")
+	public String[][] LoginDatProvider() throws IOException {
+		return readExcel();
+	}
 
-	@Test
+	@Test(dataProvider = "loginData")
 	public void LoginTestCase(String userName1, String passWord1) {
 
 		driver = new ChromeDriver();
@@ -87,8 +68,6 @@ public class LoginUsingApachePOI {
 		System.out.println("Fetching URL");
 		driver.get("http://localhost:8080/index.html?profile=Responsive");
 
-		
-		
 		System.out.println("Finding username field...");
 
 		sleep(3000);
